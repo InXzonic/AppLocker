@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val btnFingerprint = findViewById<Button>(R.id.btnFingerprint)
 
         btnPin.setOnClickListener {
-            Toast.makeText(this, "PIN feature coming soon", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, PinActivity::class.java))
         }
 
         btnFingerprint.setOnClickListener {
